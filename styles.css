@@ -5,26 +5,57 @@ body {
 
 header {
   background-color: #202020;
-  height: 5em;
-  vertical-align: middle;
+  margin-bottom: 0;
+  padding: 0;
 }
 
-nav {
+header nav {
   position: relative;
   float: right;
-  margin-top: 2em;
+  margin-top: 1.5em;
+  margin-bottom: auto;
 }
 
-a {
-  margin: 1em;
+header a {
+  margin-right: 1em;
   font-size: 1.2em;
   color: white;
   text-decoration: none;
 }
 
-.Logo {
-  width: 4em;
-  margin-top: 0.5em;
-  margin-left: 0.5em;
+header .Logo {
+  width: 3em;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+.hero {
+  position: absolute;
+  padding: 0;
+  height: 92vh;
+  width: 100vw;
+  background-color: #181818;
+}
+
+.hero .Hero-text {
+  margin-top: 4em;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+.hero .Hero-CTA {
+  margin-top: 6em;
+  text-align: center;
+}
+
+.hero .Hero-CTA button {
+  font-size: 2em;
+  text-align: center;
+  padding: 0.5em 1em;
+  border: none;
+  margin: 1em 2em;
+  border-radius: 1em;
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */

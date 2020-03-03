@@ -5,25 +5,54 @@ body {
 
 header {
   background-color: rgb(32, 32, 32);
-  height: 5em;
-  vertical-align: middle;
+  margin-bottom: 0;
+  padding: 0;
+  nav {
+    position: relative;
+    float: right;
+    margin-top: 1.5em;
+    margin-bottom: auto;
+  }
+
+  a {
+    margin-right: 1em;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+  }
+
+  .Logo {
+    width: 3em;
+    margin: 0.5em;
+    cursor: pointer;
+  }
 }
 
-nav {
-  position: relative;
-  float: right;
-  margin-top: 2em;
-}
+.hero {
+  position: absolute;
+  padding: 0;
+  height: 92vh;
+  width: 100vw;
+  background-color: rgb(24, 24, 24);
 
-a {
-  margin: 1em;
-  font-size: 1.2em;
-  color: white;
-  text-decoration: none;
-}
+  .Hero-text {
+    margin-top: 4em;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+  }
 
-.Logo {
-  width: 4em;
-  margin-top: 0.5em;
-  margin-left: 0.5em;
+  .Hero-CTA {
+    margin-top: 6em;
+    text-align: center;
+    button {
+      font-size: 2em;
+      text-align: center;
+      padding: 0.5em 1em;
+      border: none;
+      margin: 1em 2em;
+      border-radius: 1em;
+      cursor: pointer;
+    }
+  }
 }
