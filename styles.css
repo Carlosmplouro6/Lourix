@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #202020;
+  height: 5em;
+  vertical-align: middle;
+}
+
+nav {
+  position: relative;
+  float: right;
+  margin-top: 2em;
+}
+
+a {
+  margin: 1em;
+  font-size: 1.2em;
+  color: white;
+  text-decoration: none;
+}
+
+.Logo {
+  width: 4em;
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+}
+/*# sourceMappingURL=styles.css.map */
