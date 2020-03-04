@@ -4,58 +4,64 @@ body {
 }
 
 header {
+  position: absolute;
   background-color: #202020;
   margin-bottom: 0;
   padding: 0;
+  width: 100vw;
 }
 
 header nav {
   position: relative;
   float: right;
-  margin-top: 1.5em;
+  margin-top: 1.5rem;
   margin-bottom: auto;
 }
 
 header a {
-  margin-right: 1em;
-  font-size: 1.2em;
+  margin-right: 1rem;
+  font-size: 1.2rem;
   color: white;
   text-decoration: none;
 }
 
 header .Logo {
-  width: 3em;
-  margin: 0.5em;
+  width: 3rem;
+  margin: 0.5rem;
   cursor: pointer;
 }
 
 .hero {
+  margin-top: 7vh;
   position: absolute;
   padding: 0;
-  height: 92vh;
+  height: 93vh;
   width: 100vw;
-  background-color: #181818;
+  background-color: #202020;
+  background-image: url(./img/HeroBG.png);
+  background-repeat: no-repeat;
+  background-size: 100vw;
 }
 
 .hero .Hero-text {
-  margin-top: 4em;
-  font-size: 50px;
+  margin-top: 18rem;
+  font-size: 4rem;
   color: white;
   text-align: center;
 }
 
 .hero .Hero-CTA {
-  margin-top: 6em;
+  margin-top: 6rem;
   text-align: center;
 }
 
 .hero .Hero-CTA button {
-  font-size: 2em;
+  font-size: 2rem;
   text-align: center;
-  padding: 0.5em 1em;
+  padding: 0.5rem 1rem;
   border: none;
-  margin: 1em 2em;
-  border-radius: 1em;
+  margin: 1rem 2rem;
+  border-radius: 1rem;
   cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
