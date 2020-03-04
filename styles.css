@@ -90,4 +90,32 @@ header .Logo {
   border-radius: 1rem;
   cursor: pointer;
 }
+
+.About-text {
+  margin-top: 20vh;
+  text-align: center;
+  border: white 5px solid;
+  color: #202020;
+  background-color: white;
+}
+
+.cardContainer {
+  height: 93vh;
+  width: 100vw;
+  background-color: #202020;
+  background-image: url(./img/HeroBG.png);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  display: -ms-grid;
+  display: grid;
+  grid: 2 2;
+}
+
+.cardContainer .card {
+  overflow: hidden;
+}
+
+.cardContainer .card img {
+  size: 200px;
+}
 /*# sourceMappingURL=styles.css.map */

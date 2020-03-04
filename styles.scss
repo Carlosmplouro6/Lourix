@@ -88,3 +88,28 @@ header {
     }
   }
 }
+
+.About-text {
+  margin-top: 20vh;
+  text-align: center;
+  border: white 5px solid;
+  color: rgb(32, 32, 32);
+  background-color: white;
+}
+
+.cardContainer {
+  height: 93vh;
+  width: 100vw;
+  background-color: rgb(32, 32, 32);
+  background-image: url(./img/HeroBG.png);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  display: grid;
+  grid: 2 2;
+  .card {
+    overflow: hidden;
+    img {
+      size: 200px;
+    }
+  }
+}
