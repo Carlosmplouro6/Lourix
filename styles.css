@@ -1,10 +1,37 @@
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 1150px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 7px;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
 }
 
+div {
+  margin: 0;
+}
+
 header {
   position: absolute;
+  min-height: 7vh;
   background-color: #202020;
   margin-bottom: 0;
   padding: 0;
