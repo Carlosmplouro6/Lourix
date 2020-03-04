@@ -23,6 +23,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: #202020;
 }
 
 div {
@@ -99,23 +100,144 @@ header .Logo {
   background-color: white;
 }
 
-.cardContainer {
-  height: 93vh;
+.pageBody {
+  height: 100vh;
   width: 100vw;
   background-color: #202020;
   background-image: url(./img/HeroBG.png);
   background-repeat: no-repeat;
   background-size: 100vw;
+}
+
+.pageBody .cardContainer {
+  margin: 0 10vw;
   display: -ms-grid;
   display: grid;
-  grid: 2 2;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
 }
 
-.cardContainer .card {
+.pageBody .cardContainer .card {
+  margin: 5vw;
+  margin-top: 10vw;
   overflow: hidden;
+  width: 30vw;
+  height: 50vh;
+  background-color: black;
+  border: black solid 3px;
+  -webkit-box-shadow: black 2px 3px 5px;
+          box-shadow: black 2px 3px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  border-radius: 2em;
 }
 
-.cardContainer .card img {
-  size: 200px;
+.pageBody .cardContainer .card img {
+  width: 100%;
+  height: 55vh;
+}
+
+.pageBody .cardContainer .card .aboutGame {
+  width: 100%;
+  position: relative;
+  float: right;
+  color: white;
+}
+
+.pageBody .cardContainer .card .aboutGame h1 {
+  text-align: center;
+  margin-top: 15%;
+}
+
+.pageBody .cardContainer .card .aboutGame p {
+  margin: 15% 10%;
+  margin-bottom: 0;
+}
+
+.pageBody .cardContainer .card .aboutGame button {
+  background-color: #202020;
+  color: white;
+  font-size: 2vh;
+  text-align: center;
+  padding: 1vh 1.5vh;
+  border: none;
+  margin: 0 4vw;
+  border-radius: 1rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: 3vh;
+}
+
+@media (max-width: 1200px) {
+  .pageBody .cardContainer {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .pageBody .cardContainer .card {
+    margin-top: 15vh;
+    margin-left: 10vw;
+    width: 60vw;
+  }
+  .pageBody .cardContainer .card .aboutGame {
+    display: inline;
+  }
+}
+
+@media (max-width: 700px) {
+  .pageBody .cardContainer .card img {
+    display: none;
+  }
+  .pageBody .cardContainer .card .aboutGame h1 {
+    font-size: 5rem;
+  }
+  .pageBody .cardContainer .card .aboutGame p {
+    font-size: 1.5rem;
+  }
+  .pageBody .cardContainer .card .aboutGame button {
+    margin: 0 20vw;
+  }
+}
+
+#team {
+  margin-top: 8rem;
+}
+
+#team .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+}
+
+#team .grid .personCard {
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+#team .grid .personCard ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #505050;
+}
+
+#team .grid .personCard ul li {
+  font-size: 2rem;
+}
+
+#team .grid .personCard ul li img {
+  width: 40%;
+  border: #bdbdbd solid 3px;
+}
+
+@media (max-width: 650px) {
+  #team .grid {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -23,6 +23,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: rgb(32, 32, 32);
 }
 
 div {
@@ -97,19 +98,133 @@ header {
   background-color: white;
 }
 
-.cardContainer {
-  height: 93vh;
+.pageBody {
+  height: 100vh;
   width: 100vw;
   background-color: rgb(32, 32, 32);
   background-image: url(./img/HeroBG.png);
   background-repeat: no-repeat;
   background-size: 100vw;
-  display: grid;
-  grid: 2 2;
-  .card {
-    overflow: hidden;
-    img {
-      size: 200px;
+  .cardContainer {
+    margin: 0 10vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .card {
+      margin: 5vw;
+      margin-top: 10vw;
+      overflow: hidden;
+      width: 30vw;
+      height: 50vh;
+      background-color: black;
+      border: black solid 3px;
+      box-shadow: black 2px 3px 5px;
+      display: flex;
+      flex-basis: auto;
+      border-radius: 2em;
+      img {
+        width: 100%;
+        height: 55vh;
+      }
+      .aboutGame {
+        width: 100%;
+        position: relative;
+        float: right;
+        color: white;
+        h1 {
+          text-align: center;
+          margin-top: 15%;
+        }
+        p {
+          margin: 15% 10%;
+          margin-bottom: 0;
+        }
+        button {
+          background-color: rgb(32, 32, 32);
+          color: white;
+          font-size: 2vh;
+          text-align: center;
+          padding: 1vh 1.5vh;
+          border: none;
+          margin: 0 4vw;
+          border-radius: 1rem;
+          cursor: pointer;
+          position: absolute;
+          bottom: 3vh;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .pageBody {
+    .cardContainer {
+      grid-template-columns: repeat(1, 1fr);
+      .card {
+        margin-top: 15vh;
+        margin-left: 10vw;
+        width: 60vw;
+        .aboutGame {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .pageBody {
+    .cardContainer {
+      .card {
+        img {
+          display: none;
+        }
+        .aboutGame {
+          h1 {
+            font-size: 5rem;
+          }
+          p {
+            font-size: 1.5rem;
+          }
+          button {
+            margin: 0 20vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+#team {
+  margin-top: 8rem;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    .personCard {
+      overflow: hidden;
+      border-radius: 2rem;
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(80, 80, 80);
+        li {
+          img {
+            width: 40%;
+            border: rgb(189, 189, 189) solid 3px;
+          }
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  #team {
+    .grid {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
