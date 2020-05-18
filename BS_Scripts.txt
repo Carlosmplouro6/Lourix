@@ -1,0 +1,85 @@
+Create table Jogos 
+	(Jogo_id int not null auto_increment,
+	Jogo_nome varchar(60) not null,
+	Jogo_Resumo varchar(400) not null,
+	Jogo_Thumb varchar(300) not null,
+	Jogo_DtLanc date not null,
+    	Jogo_LinkPS varchar(300),
+    	Jogo_LinkTrailer varchar(300),
+	primary key (Jogo_id));
+
+
+Create table Funcionario 
+	(Func_id int not null auto_increment,
+	Func_nome varchar(60) not null,
+	Func_cargo varchar(400) not null,
+	Func_foto varchar(300) not null,
+	Func_idade int not null,
+  	Func_LinkP varchar(300),
+	primary key (Func_id));
+
+
+Create table BlogPost 
+	(Post_id int not null auto_increment,
+	Post_titulo varchar(60) not null,
+	Post_data date not null,
+	Post_Desc varchar(300) not null,
+	Post_Thumb varchar(300) not null,
+    	Post_Autor varchar(60) not null,
+    	Post_Conteudo varchar(1200) not null,
+	primary key (Post_id));
+
+Create table Imagens 
+	(Img_id int not null auto_increment,
+	Img_localPath varchar(300) not null,
+	Img_idJogo int not null,
+	primary key (Img_id));
+
+
+Create table Jogo_Categoria 
+	(JC_id int not null auto_increment,
+	JC_idCategoria int not null,
+	JC_idJogo int not null,
+	primary key (Img_id));
+
+
+Create table Tag_Post 
+	(TP_id int not null auto_increment,
+	TP_idPost int not null,
+	TP_idTag int not null,
+	primary key (TP_id));
+
+
+Create table Tags 
+	(tag_id int not null auto_increment,
+	tag_nome varchar(60) not null,
+	primary key (tag_id));
+
+Create table Categoria 
+	(cat_id int not null auto_increment,
+	cat_nome varchar(60) not null,
+	primary key (cat_id));
+
+
+-----------------------------------------------------------------------
+Alters:
+
+Alter table Imagens add constraint Image_fk_Jogos
+	foreign key (Img_idJogo) references Jogos(Jogo_id) 
+	ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+Alter table Jogo_Categoria add constraint Jogo_fk_Categoria
+	foreign key (JC_idJogo) references Jogos(Jogo_id) 
+	ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+Alter table Jogo_Categoria add constraint Categoria_fk_Jogo
+	foreign key (JC_idCategoria) references Categoria(cat_id) 
+	ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+Alter table Tag_Post  add constraint Post_fk_Tag
+	foreign key (TP_idTag) references Tags(tag_id) 
+	ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+Alter table Tag_Post  add constraint Tag_fk_Post  
+	foreign key (TP_idPost) references BlogPost(Post_id)   
+	ON DELETE NO ACTION ON UPDATE NO ACTION
